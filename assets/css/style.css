@@ -222,6 +222,7 @@ main {
   align-items: center;
   background-color: #EFEDD6;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .scroll-container h2 {
@@ -251,71 +252,16 @@ main {
   font-weight: bold;
   text-transform: capitalize;
   transform: translateX(400%);
+  transition: transform 0.4s ease;
 }
 
-.active {
-  transform: translateX(0%);
-  /* animation: slide-in-left 0.4s ease 0s forwards;
-  animation: slide-out-left 0.4s ease 0s forwards;
-  animation: slide-in-right 0.4s ease 0s forwards;
-  animation: slide-out-right 0.4s ease 0s forwards; */
-}
-
-.card:nth-of-type(even) .active {
+.card:nth-of-type(even) {
   transform: translateX(-400%);
-  animation: slide-in-left 0.4s ease 0s forwards;
-  /* animation: slide-out-left 0.4s ease 0s forwards; */
 }
 
-.active .card:nth-of-type(odd) {
-  transform: translateX(400%);
-  animation: slide-in-right 0.4s ease 0s forwards;
-  /* animation: slide-out-right 0.4s ease 0s forwards; */
+.card.active {
+  transform: translateX(0%);
 }
-
-@keyframes slide-in-left {
-  0% {
-    transform: translateX(-400%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes slide-out-left {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-400%);
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(400%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes slide-out-right {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(400%);
-  }
-}
-
-
-
-
 
 /*=================================
   main styling ends here
@@ -324,13 +270,6 @@ main {
 /*=================================
   footer styling starts here
 =================================*/
-
-
-
-
-
-
-
 /*=================================
   footer styling ends here
 =================================*/
