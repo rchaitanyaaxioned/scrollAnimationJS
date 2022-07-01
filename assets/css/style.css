@@ -255,16 +255,18 @@ main {
 
 .active .card:nth-of-type(even) {
   transform: translateX(-400%);
-  animation: slide-in-right 0.4s ease 0s forwards;
+  /* animation: slide-in-right 0.4s ease 0s forwards; */
 }
 
 .active .card:nth-of-type(odd) {
   transform: translateX(400%);
-  animation: slide-in-left 0.4s ease 0s forwards;
+  /* animation: slide-in-left 0.4s ease 0s forwards; */
 }
 
 .active {
   transform: translateX(0%);
+  animation: slide-in-right 0.4s ease 0s forwards;
+  animation: slide-in-left 0.4s ease 0s forwards;
 }
 
 @keyframes slide-in-right {
