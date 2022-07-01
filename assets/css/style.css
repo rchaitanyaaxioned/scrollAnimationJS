@@ -253,23 +253,27 @@ main {
   transform: translateX(400%);
 }
 
-.active .card:nth-of-type(even) {
+.active {
+  transform: translateX(0%);
+  /* animation: slide-in-left 0.4s ease 0s forwards;
+  animation: slide-out-left 0.4s ease 0s forwards;
+  animation: slide-in-right 0.4s ease 0s forwards;
+  animation: slide-out-right 0.4s ease 0s forwards; */
+}
+
+.card:nth-of-type(even) .active {
   transform: translateX(-400%);
-  /* animation: slide-in-right 0.4s ease 0s forwards; */
+  animation: slide-in-left 0.4s ease 0s forwards;
+  /* animation: slide-out-left 0.4s ease 0s forwards; */
 }
 
 .active .card:nth-of-type(odd) {
   transform: translateX(400%);
-  /* animation: slide-in-left 0.4s ease 0s forwards; */
-}
-
-.active {
-  transform: translateX(0%);
   animation: slide-in-right 0.4s ease 0s forwards;
-  animation: slide-in-left 0.4s ease 0s forwards;
+  /* animation: slide-out-right 0.4s ease 0s forwards; */
 }
 
-@keyframes slide-in-right {
+@keyframes slide-in-left {
   0% {
     transform: translateX(-400%);
   }
@@ -279,7 +283,17 @@ main {
   }
 }
 
-@keyframes slide-in-left {
+@keyframes slide-out-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+@keyframes slide-in-right {
   0% {
     transform: translateX(400%);
   }
@@ -289,7 +303,15 @@ main {
   }
 }
 
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0%);
+  }
 
+  100% {
+    transform: translateX(400%);
+  }
+}
 
 
 
