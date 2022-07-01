@@ -182,6 +182,7 @@ sub {
 
 /*for all*/
 body {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -218,9 +219,16 @@ main {
 }
 
 .scroll-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #EFEDD6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
 }
@@ -236,8 +244,15 @@ main {
 }
 
 .card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -245,21 +260,32 @@ main {
   padding: 75px 85%;
   margin: 10px 0;
   background-color: #4682B4;
+  -webkit-box-shadow: 2px 4px 5px rgb(0 0 0 / 30%);
   box-shadow: 2px 4px 5px rgb(0 0 0 / 30%);
   border-radius: 10px;
   color: #FFF;
   font-size: 40px;
   font-weight: bold;
   text-transform: capitalize;
+  -webkit-transform: translateX(400%);
+  -ms-transform: translateX(400%);
   transform: translateX(400%);
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  -o-transition: transform 0.4s ease;
   transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 
 .card:nth-of-type(even) {
+  -webkit-transform: translateX(-400%);
+  -ms-transform: translateX(-400%);
   transform: translateX(-400%);
 }
 
 .card.active {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
   transform: translateX(0%);
 }
 
