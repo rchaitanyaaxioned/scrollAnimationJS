@@ -115,6 +115,7 @@ section {
 /* Force scrollbar */
 html {
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 /* Align radios and text inputs with their label */
@@ -205,13 +206,6 @@ li {
 }
 
 /*=================================
-  Header styling starts here
-=================================*/
-/*=================================
-  Header styling ends here
-=================================*/
-
-/*=================================
   main styling starts here
 =================================*/
 main {
@@ -292,14 +286,3 @@ main {
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/
-/*=================================
-  footer styling ends here
-=================================*/
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {}
